@@ -31,7 +31,7 @@ const About = () => {
                 alike.
               </p>
 
-              <img
+              <img 
                 className="mission-image"
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
                 alt="Business team in meeting"
@@ -53,52 +53,52 @@ const About = () => {
       </section>
 
       <section className="journey-wrap">
-            <div className="container">
-              <div className="journey-box">
-                <div>
-                  <h2 className="journey-header">Our Journey</h2>
+        <div className="container">
+          <div className="journey-box">
+            <div>
+              <h2 className="journey-header">Our Journey</h2>
 
-                  <ul className="timeline">
-                    {journeyItems.map((item) => (
-                      <li key={item.year}>
-                        <span className="tag">{item.year}</span>
-                        <div>
-                          <h4>{item.title}</h4>
-                          <p>{item.text}</p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <img
-                  className="journey-image"
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
-                  alt="Office team collaborating"
-                />
-              </div>
-            </div>
-          </section>
-
-             <section className="team-section">
-            <div className="container">
-              <div className="team-header">
-                <h2>Leadership Team</h2>
-                <p>The minds behind the platform.</p>
-              </div>
-
-              <div className="team-grid">
-                {team.map((member) => (
-                  <div className="member-card" key={member.name}>
-                    <img src={member.image} alt={member.name} />
-                    <div className="member-meta">
-                      <h3>{member.name}</h3>
-                      <p>{member.role}</p>
+              <ul className="timeline">
+                {journeyItems.map((item) => (
+                  <li key={item.year}>
+                    <span className="tag">{item.year}</span>
+                    <div>
+                      <h4>{item.title}</h4>
+                      <p>{item.text}</p>
                     </div>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
-          </section>
+            <img
+              className="journey-image"
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+              alt="Office team collaborating"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="team-section">
+        <div className="container">
+          <div className="team-header">
+            <h2>Leadership Team</h2>
+            <p>The minds behind the platform.</p>
+          </div>
+
+          <div className="team-grid">
+            {team.map((member) => (
+              <div className="member-card" key={member.name}>
+                <img src={member.image} alt={member.name} />
+                <div className="member-meta">
+                  <h3>{member.name}</h3>
+                  <p>{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

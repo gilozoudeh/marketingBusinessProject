@@ -25,7 +25,7 @@ const Home = () => {
             <img src={heroImage} />
           </div>
         </div>
-      </section>
+      </section> 
 
       {/* our services section */}
 
@@ -57,7 +57,6 @@ const Home = () => {
         </div>
       </section>
       <Ready />
-
     </div>
   );
 };

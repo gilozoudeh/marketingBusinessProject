@@ -277,6 +277,211 @@ li {
   font-weight: 700;
   font-size: 0.95rem;
 }
+.section {
+  padding: 28px 0 18px;
+}
+
+/* Mission section */
+
+.mission-box {
+  display: grid;
+  grid-template-columns: 1.7fr 0.9fr;
+  gap: 26px;
+  background: #eef1f5;
+  border: 1px solid #e4e7ec;
+  border-radius: 18px;
+  padding: 26px 26px 20px;
+  align-items: flex-start;
+}
+.mission-left {
+  min-width: 0;
+}
+.mission-title {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  color: #111827;
+}
+.mission-copy {
+  font-size: 0.96rem;
+  line-height: 1.75;
+  color: #4b5563;
+  margin: 0;
+  max-width: 660px;
+}
+.mission-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid #dfe3ea;
+}
+.mission-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 6px;
+}
+.point {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 14px 14px;
+  min-height: 90px;
+}
+.point-top {
+  /* display: flex; */
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.point-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e8edff;
+  color: #0b5cff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.point h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #111827;
+}
+.point p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Journey styling */
+.journey-wrap {
+  padding-top: 40px;
+  padding-bottom: 28px;
+}
+.journey-box {
+  display: grid;
+  grid-template-columns: 0.95fr 1.3fr;
+  gap: 34px;
+  align-items: center;
+  background: #f2f3f5;
+  padding: 18px 26px;
+}
+.journey-header {
+  margin: 0 0 18px;
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  letter-spacing: -0.05em;
+  color: #111827;
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-right: 10px;
+}
+.timeline li {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 14px;
+  align-items: flex-start;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 20px;
+  padding: 2px 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #374151;
+  margin-top: 4px;
+}
+.timeline h4 {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #111827;
+}
+.timeline p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+.journey-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  border: 1px solid #dfe3ea;
+}
+
+/* Team section Styling*/
+.team-section {
+  padding-top: 45px;
+  padding-bottom: 26px;
+}
+.team-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+.team-header h2 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  letter-spacing: -0.05em;
+}
+.team-header p {
+  margin: 8px 0 0;
+  font-size: 1.05rem;
+  color: #4b5563;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 18px;
+}
+.member-card {
+  background: #f7f8f9;
+  border: 1px solid #e8ebef;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.member-card img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  display: block;
+  background: #e5e7eb;
+}
+.member-meta {
+  padding: 12px 14px 16px;
+  text-align: center;
+}
+.member-meta h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  color: #111827;
+}
+.member-meta p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
 
 /* responsiveness section */
 
@@ -466,5 +671,51 @@ li {
     text-decoration: none;
     color: gray;
     font-size: 14px;
+  }
+}
+
+/* About section Responsiveness */
+
+@media (max-width: 980px) {
+  .mission-box,
+  .journey-box {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .nav {
+    display: none;
+  }
+
+  .topbar-inner {
+    justify-content: space-between;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .mission-box {
+    padding: 18px;
+  }
+
+  .journey-image {
+    height: 290px;
+  }
+
+  .member-card img {
+    height: 270px;
   }
 }
