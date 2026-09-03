@@ -1,7 +1,6 @@
 import heroImage from "../images/landingpage.jpg";
 import { BsClipboard2DataFill } from "react-icons/bs";
 import { everythingData } from "../../data.js";
-
 import { services } from "../../data.js";
 import Ready from "./Ready.jsx";
 const Home = () => {
